@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-image: url('/img/original/01-anaheim-1.jpg');
+  background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  background-position: center; /* Centraliza a imagem */
+}
+
+
+
+#header {
+  background-color: #222428;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.global-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.global-header a img {
+  max-width: 130px;
+  max-height: 80px;
+  height: auto;
+  display: block;
+}
+
+.main-text {
+  color: white;
+  text-align: center;
+  margin: 30px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slide-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Prev & Next button */
+.arrow-prev, .arrow-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.arrow-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.arrow-prev:hover, .arrow-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.slideNumber {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.preview-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Oswald', sans-serif;
+
+
+}
+
+
+.preview-container .preview {
+  cursor: pointer;
+  height: 100px; /* Tamanho do preview */
+  width: 100px; /* Tamanho do preview */
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.preview-container .preview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.active, .preview:hover {
+  background-color: #717171;
+  border-color: #fff;
+}
+
+/* Navigation buttons */
+.nav-button {
+  background-color: #222428;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
+}
+
+@media only screen and (max-width: 300px) {
+  .arrow-prev, .arrow-next, .text {font-size: 11px;}
+}
